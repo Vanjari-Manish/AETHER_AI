@@ -1,6 +1,35 @@
-# Grid Policy Orchestrator (GPO) — Phase 0.11 AI Development Guide
+# Grid Policy Orchestrator (GPO)
+## AI Development Handbook
 
-This guide establishes the official AI Development Standards for the Grid Policy Orchestrator (GPO) project. It defines the principles, prompts, workflows, and constraints governing the use of AI assistants (ChatGPT, Claude, Gemini, Cursor, Copilot, Antigravity, etc.) to ensure they consistently produce enterprise-grade, clean, secure, and performant code.
+*   **Version:** v1.0.0
+*   **Status:** Approved
+*   **Owner:** Prompt Engineering Expert / Engineering Lead
+*   **Phase:** Phase 0.11
+*   **Last Updated:** July 22, 2026
+*   **Purpose:** System prompts, templates, coding rules, and safety bounds governing AI-assisted development loops.
+
+---
+
+## Table of Contents
+*   [1. Purpose](#1-purpose)
+*   [2. AI Development Principles](#2-ai-development-principles)
+*   [3. Master System Prompt](#3-master-system-prompt)
+*   [4. Master UI Prompt](#4-master-ui-prompt)
+*   [5. Master Frontend Prompt](#5-master-frontend-prompt)
+*   [6. Master Backend Prompt](#6-master-backend-prompt)
+*   [7. Master FastAPI Prompt](#7-master-fastapi-prompt)
+*   [8. Master React Prompt](#8-master-react-prompt)
+*   [9. Master Design Prompt](#9-master-design-prompt)
+*   [10. Prompt Templates](#10-prompt-templates)
+*   [11. AI Coding Rules](#11-ai-coding-rules)
+*   [12. AI Code Review Checklist](#12-ai-code-review-checklist)
+*   [13. AI Collaboration Workflow](#13-ai-collaboration-workflow)
+*   [14. Prompt Engineering Best Practices](#14-prompt-engineering-best-practices)
+*   [15. AI Safety Guidelines](#15-ai-safety-guidelines)
+*   [16. Common Mistakes to Avoid](#16-common-mistes-to-avoid)
+*   [17. Continuous Improvement](#17-continuous-improvement)
+*   [18. Related Documents](#18-related-documents)
+*   [19. Revision History](#19-revision-history)
 
 ---
 
@@ -406,3 +435,19 @@ Review all AI-generated code against these criteria:
 *   **Coding Standards:** Update prompts when formatting or code lint configurations are adjusted.
 *   **Architecture Evolution:** If services are refactored or new technologies are adopted, update the System Prompt context.
 *   **Community Feedback:** Update this guide with tips and best practices shared by the development team.
+
+---
+
+## 18. Related Documents
+*   [Development & Git Standards](CONTRIBUTING.md)
+*   [Technical Architecture Specification](ARCHITECTURE.md)
+*   [API Specification Contract](API_SPEC.md)
+*   [Reusable Component Library](COMPONENT_LIBRARY.md)
+
+---
+
+## 19. Revision History
+
+| Version | Date | Description | Author |
+| :--- | :--- | :--- | :--- |
+| v1.0.0 | July 22, 2026 | Initial Release for Phase 0 | Prompt Engineering Expert |

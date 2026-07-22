@@ -1,6 +1,44 @@
-# Grid Policy Orchestrator (GPO) — Phase 0.5 Screen Catalog
+# Grid Policy Orchestrator (GPO)
+## Screen Inventory & Flow Catalog
 
-This planning document outlines the complete screen catalog for the Grid Policy Orchestrator (GPO) platform. It serves as the master planning reference for designers, frontend developers, and backend engineers before UI design and implementation begin.
+*   **Version:** v1.0.0
+*   **Status:** Approved
+*   **Owner:** Enterprise Solution Architect
+*   **Phase:** Phase 0.5
+*   **Last Updated:** July 22, 2026
+*   **Purpose:** Inventories every screen, navigation path, layout compartment, required API, and role permission levels.
+
+---
+
+## Table of Contents
+*   [1. Authentication Screens](#1-authentication-screens)
+    *   [1.1 Login Screen](#11-login-screen)
+    *   [1.2 Signup Screen](#12-signup-screen)
+    *   [1.3 Forgot Password Screen](#13-forgot-password-screen)
+    *   [1.4 Reset Password Screen](#14-reset-password-screen)
+    *   [1.5 Verify Email Screen](#15-verify-email-screen)
+*   [2. Main Application Screens](#2-main-application-screens)
+    *   [2.1 Home Screen](#21-home-screen)
+    *   [2.2 Dashboard Screen](#22-dashboard-screen)
+    *   [2.3 Digital Twin Screen (Grid Topology Map)](#23-digital-twin-screen-grid-topology-map)
+    *   [2.4 Scenario Builder Screen](#24-scenario-builder-screen)
+    *   [2.5 Simulation Screen](#25-simulation-screen)
+    *   [2.6 Policy Engine Screen (Policy Studio)](#26-policy-engine-screen-policy-studio)
+    *   [2.7 AI Agents Screen](#27-ai-agents-screen)
+    *   [2.8 Analytics Screen](#28-analytics-screen)
+    *   [2.9 Reports Screen](#29-reports-screen)
+    *   [2.10 Timeline Screen](#210-timeline-screen)
+    *   [2.11 Audit Logs Screen](#211-audit-logs-screen)
+    *   [2.12 Notifications Screen](#212-notifications-screen)
+    *   [2.13 Settings Screen](#213-settings-screen)
+    *   [2.14 User Profile Screen](#214-user-profile-screen)
+    *   [2.15 Administration Screen](#215-administration-screen)
+*   [3. Logically Added Enterprise Screens](#3-logically-added-enterprise-screens)
+    *   [3.1 GIS Grid Map Screen (Geographic Visualizer)](#31-gis-grid-map-screen-geographic-visualizer)
+    *   [3.2 Device Manager Screen (Protocol & SCADA Monitor)](#32-device-manager-screen-protocol--scada-monitor)
+    *   [3.3 Emergency Override Gate Screen](#33-emergency-override-gate-screen)
+*   [4. Related Documents](#4-related-documents)
+*   [5. Revision History](#5-revision-history)
 
 ---
 
@@ -360,3 +398,19 @@ To meet the requirements of a mission-critical utility control room and NERC com
 *   **Components Used:** Navbar, Cards, Forms, Inputs, Buttons, Switches, Status Indicators, Dialogs.
 *   **Required APIs:** Scenario API, Authentication API, Report API.
 *   **Required Permissions:** Operator, Administrator. Dual-authorization required (Operator + Administrator signatures). Full Read-Write access.
+
+---
+
+## 4. Related Documents
+*   [User Experience Standards](UX_GUIDELINES.md)
+*   [Reusable Component Library](COMPONENT_LIBRARY.md)
+*   [Technical Architecture Specification](ARCHITECTURE.md)
+*   [API Specification Contract](API_SPEC.md)
+
+---
+
+## 5. Revision History
+
+| Version | Date | Description | Author |
+| :--- | :--- | :--- | :--- |
+| v1.0.0 | July 22, 2026 | Initial Release for Phase 0 | Enterprise Solution Architect |

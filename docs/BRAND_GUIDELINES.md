@@ -1,6 +1,26 @@
-# Grid Policy Orchestrator (GPO) — Phase 0.2 Brand Guidelines
+# Grid Policy Orchestrator (GPO)
+## Brand Guidelines
 
-This document establishes the official brand identity, typography rules, color palettes, naming conventions, and core design philosophies for the Grid Policy Orchestrator (GPO) project. 
+*   **Version:** v1.0.0
+*   **Status:** Approved
+*   **Owner:** Creative Director / Brand Strategist
+*   **Phase:** Phase 0.2
+*   **Last Updated:** July 22, 2026
+*   **Purpose:** Defines GPO's brand identity, typography, corporate color palette, naming standards, and visual assets rules.
+
+---
+
+## Table of Contents
+*   [1. Brand Overview](#1-brand-overview)
+*   [2. Logo Concept](#2-logo-concept)
+*   [3. Official Color Palette](#3-official-color-palette)
+*   [4. Typography](#4-typography)
+*   [5. Naming Conventions](#5-naming-conventions)
+*   [6. Iconography Style](#6-iconography-style)
+*   [7. Illustration Style](#7-illustration-style)
+*   [8. Core Design Philosophy](#8-core-design-philosophy)
+*   [9. Related Documents](#9-related-documents)
+*   [10. Revision History](#10-revision-history)
 
 ---
 
@@ -23,7 +43,6 @@ The Grid Policy Orchestrator represents the convergence of physical electrical p
 ---
 
 ## 2. Logo Concept
-
 *   **Primary Logo Concept:** The Policy Hexagon Hub. Features a central coordinate node (the core compiler/orchestrator) connected via geometric network paths to surrounding, symmetric edge nodes (active edge agents). The entire cluster is enclosed inside a solid hexagon boundary, symbolizing NERC policy perimeters.
 *   **Icon Concept:** A simplified monogram combining the grid lines of a power transformer schematic enclosed inside a geometric policy boundary, optimized for legibility at `16x16px`.
 *   **Logo Symbolism:** 
@@ -37,7 +56,6 @@ The Grid Policy Orchestrator represents the convergence of physical electrical p
 ---
 
 ## 3. Official Color Palette
-
 Colors are selected to reduce eye strain during 12-hour shifts in control room environments, ensuring legibility and clear hierarchy.
 
 | Color Role | HEX Code | RGB Code | Selection Reason & Usage |
@@ -78,10 +96,8 @@ Colors are selected to reduce eye strain during 12-hour shifts in control room e
 
 ---
 
-## 5. Engineering Naming Conventions
-
+## 5. Naming Conventions
 Consistency in naming conventions prevents developer errors and aligns the codebase with physical system assets.
-
 *   **Pages (Views):** Lowercase, kebab-case (e.g., `/active-topology`, `/policy-compiler`, `/contingency-log`).
 *   **UI Components:** PascalCase (e.g., `GridTopologyViewer`, `AgentNegotiationList`, `PolicyConstraintCard`).
 *   **AI / Edge Agents:** Screaming Snake with subsystem prefix (e.g., `AGT_SUB_RENO_4A`, `AGT_DER_BAT_12B`).
@@ -93,7 +109,6 @@ Consistency in naming conventions prevents developer errors and aligns the codeb
 ---
 
 ## 6. Iconography Style
-
 *   **Icon Library:** Lucide Icons. Clean, geometric vectors that align perfectly to standard pixel boundaries.
 *   **Icon Sizing:** `16px` for inline logs, `18px` for card headers, `24px` for main navigation menus.
 *   **Stroke Weight:** Locked to `2.0px` for UI components, and `1.5px` for large schematic drawings.
@@ -103,7 +118,6 @@ Consistency in naming conventions prevents developer errors and aligns the codeb
 ---
 
 ## 7. Illustration Style
-
 *   **Illustration Type:** 2D Vector Schematics. Visual elements must resemble technical blueprints or block diagrams.
 *   **Empty State Visuals:** Dotted container outline `#2A313C` displaying a placeholder code (e.g., `[ERR.NODE-NULL-0]`).
 *   **Error Pages:** Red vector schematics (`#EF4444`) showing a disconnected line pathway, avoiding cartoon illustrations.
@@ -113,10 +127,25 @@ Consistency in naming conventions prevents developer errors and aligns the codeb
 ---
 
 ## 8. Core Design Philosophy
-
 *   **Function Over Decoration:** Layout elements exist to communicate structure. Avoid drop shadows, glows, or empty boxes.
 *   **Engineering-First Mapping:** Display grid nodes as single-line topology maps matching the operator's mental model.
 *   **Data Readability & Contrast:** Maximize layout density without clutter. Ensure a minimum `4.5:1` contrast ratio.
 *   **Redundant Indicators:** State changes must pair color cues with text labels (e.g., `[TRIPPED]` in red) for colorblind safety.
 *   **Rigid Consistency:** Keep spacing, headers, margins, and component alignments identical.
 *   **Zero-Lag UI:** Transition animations must be fast (fades under `150ms`), avoiding lags or visual delays.
+
+---
+
+## 9. Related Documents
+*   [Product Vision](PRODUCT_VISION.md)
+*   [Design System Specifications](DESIGN_SYSTEM.md)
+*   [User Experience Standards](UX_GUIDELINES.md)
+*   [Technical Architecture Specification](ARCHITECTURE.md)
+
+---
+
+## 10. Revision History
+
+| Version | Date | Description | Author |
+| :--- | :--- | :--- | :--- |
+| v1.0.0 | July 22, 2026 | Initial Release for Phase 0 | Creative Director |

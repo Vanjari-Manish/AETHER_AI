@@ -1,6 +1,34 @@
-# Grid Policy Orchestrator (GPO) — Phase 0.10 Development & Git Standards
+# Grid Policy Orchestrator (GPO)
+## Development & Git Standards
 
-This document establishes the official development, Git, and workflow standards for the Grid Policy Orchestrator (GPO) project. All developers, engineers, and contributors must adhere strictly to these guidelines to ensure code quality, security compliance (NERC CIP), and system stability.
+*   **Version:** v1.0.0
+*   **Status:** Approved
+*   **Owner:** Staff Developer Experience Engineer
+*   **Phase:** Phase 0.10
+*   **Last Updated:** July 22, 2026
+*   **Purpose:** Guidelines for code formatting, branching models, conventional commit rules, and pull request review criteria.
+
+---
+
+## Table of Contents
+*   [1. Development Philosophy](#1-development-philosophy)
+*   [2. Repository Structure](#2-repository-structure)
+*   [3. Branch Strategy](#3-branch-strategy)
+*   [4. Commit Message Convention](#4-commit-message-convention)
+*   [5. Pull Request Standards](#5-pull-request-standards)
+*   [6. Code Style Guidelines](#6-code-style-guidelines)
+*   [7. Linting Standards](#7-linting-standards)
+*   [8. Formatting Standards](#8-formatting-standards)
+*   [9. Naming Conventions](#9-naming-conventions)
+*   [10. Folder Organization](#10-folder-organization)
+*   [11. Environment Variables](#11-environment-variables)
+*   [12. Documentation Standards](#12-documentation-standards)
+*   [13. Testing Standards](#13-testing-standards)
+*   [14. Code Review Checklist](#14-code-review-checklist)
+*   [15. Security Best Practices](#15-security-best-practices)
+*   [16. Development Workflow](#16-development-workflow)
+*   [17. Related Documents](#17-related-documents)
+*   [18. Revision History](#18-revision-history)
 
 ---
 
@@ -244,3 +272,19 @@ During review, code must be evaluated against the following criteria:
        ▼
 [Merge to main & Production Deployment]
 ```
+
+---
+
+## 17. Related Documents
+*   [AI Development Handbook](AI_DEVELOPMENT_GUIDE.md)
+*   [Technical Architecture Specification](ARCHITECTURE.md)
+*   [Database & Schema Design](DATABASE_DESIGN.md)
+*   [API Specification Contract](API_SPEC.md)
+
+---
+
+## 18. Revision History
+
+| Version | Date | Description | Author |
+| :--- | :--- | :--- | :--- |
+| v1.0.0 | July 22, 2026 | Initial Release for Phase 0 | Staff Developer Experience Engineer |

@@ -1,6 +1,82 @@
-# Grid Policy Orchestrator (GPO) — Phase 0.7 Technical Architecture
+# Grid Policy Orchestrator (GPO)
+## Technical Architecture Specification
 
-This document defines the official system architecture for the Grid Policy Orchestrator (GPO) platform. It provides the architectural blueprint that guides all future development, describing how every major subsystem fits together.
+*   **Version:** v1.0.0
+*   **Status:** Approved
+*   **Owner:** Principal Software Architect / AI Systems Architect
+*   **Phase:** Phase 0.7
+*   **Last Updated:** July 22, 2026
+*   **Purpose:** Blueprint outlining overall microservices design, multi-agent AI loops, simulation pipelines, database stacks, and deployment perimeters.
+
+---
+
+## Table of Contents
+*   [1. Architecture Overview](#1-architecture-overview)
+    *   [1.1 Overall Architecture Style](#11-overall-architecture-style)
+    *   [1.2 High-Level System Overview](#12-high-level-system-overview)
+    *   [1.3 Design Principles](#13-design-principles)
+    *   [1.4 Major Subsystems](#14-major-subsystems)
+    *   [1.5 Architectural Goals](#15-architectural-goals)
+*   [2. Frontend Architecture](#2-frontend-architecture)
+    *   [2.1 Overall Frontend Structure](#21-overall-frontend-structure)
+    *   [2.2 Module Organization](#22-module-organization)
+    *   [2.3 State Management Strategy](#23-state-management-strategy)
+    *   [2.4 Routing Strategy](#24-routing-strategy)
+    *   [2.5 Component Organization](#25-component-organization)
+    *   [2.6 Data Flow](#26-data-flow)
+    *   [2.7 Authentication Flow](#27-authentication-flow)
+    *   [2.8 Error Handling Strategy](#28-error-handling-strategy)
+*   [3. Backend Architecture](#3-backend-architecture)
+    *   [3.1 Service Organization](#31-service-organization)
+    *   [3.2 Business Logic Layer](#32-business-logic-layer)
+    *   [3.3 API Layer](#33-api-layer)
+    *   [3.4 Background Jobs](#34-background-jobs)
+    *   [3.5 File Processing](#35-file-processing)
+    *   [3.6 Logging & Auditing](#36-logging--auditing)
+    *   [3.7 Configuration Management](#37-configuration-management)
+    *   [3.8 Error Handling](#38-error-handling)
+*   [4. AI Architecture](#4-ai-architecture)
+    *   [4.1 Multi-Agent Architecture](#41-multi-agent-architecture)
+    *   [4.2 Agent Responsibilities](#42-agent-responsibilities)
+    *   [4.3 Agent Communication](#43-agent-communication)
+    *   [4.4 Orchestrator](#44-orchestrator)
+    *   [4.5 Memory Strategy](#45-memory-strategy)
+    *   [4.6 RAG Integration](#46-rag-integration)
+    *   [4.7 Explainability](#47-explainability)
+    *   [4.8 Human Approval Workflow](#48-human-approval-workflow)
+    *   [4.9 Hallucination Mitigation Strategy](#49-hallucination-mitigation-strategy)
+*   [5. Simulation Architecture](#5-simulation-architecture)
+    *   [5.1 Digital Twin](#51-digital-twin)
+    *   [5.2 Simulation Engine](#52-simulation-engine)
+    *   [5.3 Scenario Execution](#53-scenario-execution)
+    *   [5.4 Optimization Pipeline](#54-optimization-pipeline)
+    *   [5.5 Policy Evaluation](#55-policy-evaluation)
+    *   [5.6 Result Generation](#56-result-generation)
+*   [6. Database Architecture](#6-database-architecture)
+    *   [6.1 Transactional Database (PostgreSQL)](#61-transactional-database-postgresql)
+    *   [6.2 Vector Database (Qdrant)](#62-vector-database-qdrant)
+    *   [6.3 Cache Layer (Redis)](#63-cache-layer-redis)
+    *   [6.4 File Storage](#64-file-storage)
+    *   [6.5 Backup Strategy](#65-backup-strategy)
+    *   [6.6 Data Lifecycle](#66-data-lifecycle)
+*   [7. Deployment Architecture](#7-deployment-architecture)
+    *   [7.1 Development Environment](#71-development-environment)
+    *   [7.2 Testing & Staging Environment](#72-testing--staging-environment)
+    *   [7.3 Production Environment](#73-production-environment)
+    *   [7.4 CI/CD Overview](#74-cicd-overview)
+    *   [7.5 Monitoring & Logging](#75-monitoring--logging)
+    *   [7.6 Scalability & High Availability](#76-scalability--high-availability)
+*   [8. Security Architecture](#8-security-architecture)
+    *   [8.1 Authentication & Authorization](#81-authentication--authorization)
+    *   [8.2 Role-Based Access Control (RBAC)](#82-role-based-access-control-rbac)
+    *   [8.3 API & Secret Security](#83-api--secret-security)
+    *   [8.4 Encryption](#84-encryption)
+    *   [8.5 Audit Logging](#85-audit-logging)
+    *   [8.6 Input Validation & Secure AI](#86-input-validation--secure-ai)
+*   [9. Cross-Cutting Concerns](#9-cross-cutting-concerns)
+*   [10. Recommended Technology Stack](#10-recommended-technology-stack)
+*   [11. Related Documents](#11-related-documents)
+*   [12. Revision History](#12-revision-history)
 
 ---
 
@@ -350,3 +426,20 @@ API payloads are validated against strict schemas to prevent injection attacks. 
 | **Authentication** | **Auth0 / Keycloak** | Standard OIDC/OAuth2 protocols with Active Directory integration. |
 | **Cloud Deployment**| **Kubernetes (EKS / GKE)** | High-availability container orchestration and scaling. |
 | **Observability** | **Prometheus & Grafana** | Industry-standard metric collection and dashboard overlays. |
+
+---
+
+## 11. Related Documents
+*   [Product Vision](PRODUCT_VISION.md)
+*   [Database & Schema Design](DATABASE_DESIGN.md)
+*   [API Specification Contract](API_SPEC.md)
+*   [Screen Inventory & Flow Catalog](SCREEN_CATALOG.md)
+*   [Reusable Component Library](COMPONENT_LIBRARY.md)
+
+---
+
+## 12. Revision History
+
+| Version | Date | Description | Author |
+| :--- | :--- | :--- | :--- |
+| v1.0.0 | July 22, 2026 | Initial Release for Phase 0 | Principal Software Architect |

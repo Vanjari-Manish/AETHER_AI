@@ -1,4 +1,98 @@
-# Grid Policy Orchestrator (GPO) — Phase 0.6 Component Library
+# Grid Policy Orchestrator (GPO)
+## Reusable Component Library
+
+*   **Version:** v1.0.0
+*   **Status:** Approved
+*   **Owner:** Enterprise UI Component Architect
+*   **Phase:** Phase 0.6
+*   **Last Updated:** July 22, 2026
+*   **Purpose:** Mapped specification of all common and domain-specific reusable components, their properties, variants, and states.
+
+---
+
+## Table of Contents
+*   [1. Navigation Components](#1-navigation-components)
+    *   [1.1 Sidebar](#11-sidebar)
+    *   [1.2 Navbar](#12-navbar)
+    *   [1.3 Breadcrumb](#13-breadcrumb)
+    *   [1.4 Menu](#14-menu)
+    *   [1.5 Command Palette](#15-command-palette)
+    *   [1.6 Search Bar](#16-search-bar)
+*   [2. Buttons](#2-buttons)
+    *   [2.1 Button](#21-button)
+    *   [2.2 Icon Button](#22-icon-button)
+    *   [2.3 Floating Action Button (FAB)](#23-floating-action-button-fab)
+    *   [2.4 Button Group](#24-button-group)
+*   [3. Forms](#3-forms)
+    *   [3.1 Text Input](#31-text-input)
+    *   [3.2 Password Input](#32-password-input)
+    *   [3.3 Search Input](#33-search-input)
+    *   [3.4 Number Input](#34-number-input)
+    *   [3.5 Textarea](#35-textarea)
+    *   [3.6 Checkbox](#36-checkbox)
+    *   [3.7 Radio Button](#37-radio-button)
+    *   [3.8 Switch](#38-switch)
+    *   [3.9 Select](#39-select)
+    *   [3.10 Multi Select](#310-multi-select)
+    *   [3.11 Date Picker](#311-date-picker)
+    *   [3.12 File Upload](#312-file-upload)
+*   [4. Data Display](#4-data-display)
+    *   [4.1 Card](#41-card)
+    *   [4.2 KPI Card](#42-kpi-card)
+    *   [4.3 Data Table](#43-data-table)
+    *   [4.4 Badge](#44-badge)
+    *   [4.5 Chip](#45-chip)
+    *   [4.6 Tag](#46-tag)
+    *   [4.7 Tooltip](#47-tooltip)
+    *   [4.8 Accordion](#48-accordion)
+    *   [4.9 Tabs](#49-tabs)
+    *   [4.10 Timeline](#410-timeline)
+    *   [4.11 Progress Bar](#411-progress-bar)
+    *   [4.12 Avatar](#412-avatar)
+    *   [4.13 Pagination](#413-pagination)
+*   [5. Feedback Components](#5-feedback-components)
+    *   [5.1 Modal](#51-modal)
+    *   [5.2 Drawer](#52-drawer)
+    *   [5.3 Toast](#53-toast)
+    *   [5.4 Alert](#54-alert)
+    *   [5.5 Confirmation Dialog](#55-confirmation-dialog)
+    *   [5.6 Empty State](#56-empty-state)
+    *   [5.7 Error State](#57-error-state)
+    *   [5.8 Loading State](#58-loading-state)
+    *   [5.9 Skeleton Loader](#59-skeleton-loader)
+    *   [5.10 Spinner](#510-spinner)
+*   [6. Charts](#6-charts)
+    *   [6.1 Chart Container](#61-chart-container)
+    *   [6.2 Line Chart](#62-line-chart)
+    *   [6.3 Bar Chart](#63-bar-chart)
+    *   [6.4 Area Chart](#64-area-chart)
+    *   [6.5 Pie Chart](#65-pie-chart)
+    *   [6.6 Heat Map](#66-heat-map)
+    *   [6.7 Legend](#67-legend)
+    *   [6.8 Filter Panel](#68-filter-panel)
+*   [7. Domain Components](#7-domain-components)
+    *   [7.1 Grid Node Card](#71-grid-node-card)
+    *   [7.2 Transmission Line Card](#72-transmission-line-card)
+    *   [7.3 Substation Card](#73-substation-card)
+    *   [7.4 Scenario Card](#74-scenario-card)
+    *   [7.5 Simulation Card](#75-simulation-card)
+    *   [7.6 Policy Card](#76-policy-card)
+    *   [7.7 Policy Selector](#77-policy-selector)
+    *   [7.8 Agent Card](#78-agent-card)
+    *   [7.9 Recommendation Card](#79-recommendation-card)
+    *   [7.10 Explainability Card](#710-explainability-card)
+    *   [7.11 Decision Card](#711-decision-card)
+    *   [7.12 Risk Card](#712-risk-card)
+    *   [7.13 Notification Card](#713-notification-card)
+    *   [7.14 Audit Log Item](#714-audit-log-item)
+*   [8. Logically Added Enterprise Components](#8-logically-added-enterprise-components)
+    *   [8.1 Grid Schema Visualizer (Interactive Canvas Component)](#81-grid-schema-visualizer-interactive-canvas-component)
+    *   [8.2 Terminal Console Component](#82-terminal-console-component)
+    *   [8.3 MFA Code Input Component](#83-mfa-code-input-component)
+*   [9. Related Documents](#9-related-documents)
+*   [10. Revision History](#10-revision-history)
+
+---
 
 This document serves as the master inventory and specification directory of all reusable UI components planned for the Grid Policy Orchestrator (GPO) platform. 
 
@@ -1035,3 +1129,19 @@ To support the requirements of a NERC CIP-compliant control room and simulation 
 *   **Usage Guidelines:**
     *   *When to use:* Login security gates and Emergency Override execution confirmations.
     *   *When not to use:* Standard numerical values.
+
+---
+
+## 9. Related Documents
+*   [Design System Specifications](DESIGN_SYSTEM.md)
+*   [User Experience Standards](UX_GUIDELINES.md)
+*   [Screen Inventory & Flow Catalog](SCREEN_CATALOG.md)
+*   [Technical Architecture Specification](ARCHITECTURE.md)
+
+---
+
+## 10. Revision History
+
+| Version | Date | Description | Author |
+| :--- | :--- | :--- | :--- |
+| v1.0.0 | July 22, 2026 | Initial Release for Phase 0 | Enterprise UI Component Architect |

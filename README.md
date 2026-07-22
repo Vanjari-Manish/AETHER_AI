@@ -1,18 +1,42 @@
 # Grid Policy Orchestrator (GPO)
-> Policy-Aware Multi-Agent Decision Intelligence Platform for Smart Grid Operations
+## Project Landing Page & Documentation Directory
 
+*   **Version:** v1.0.0
+*   **Status:** Approved
+*   **Owner:** Technical Writer / Documentation Lead
+*   **Phase:** Phase 0 Summary
+*   **Last Updated:** July 22, 2026
+*   **Purpose:** Central landing page and documentation directory for the Grid Policy Orchestrator platform.
+
+---
+
+## Table of Contents
+*   [1. System Overview](#1-system-overview)
+*   [2. Project Vision](#2-project-vision)
+*   [3. Key Features](#3-key-features)
+*   [4. Technology Stack Summary](#4-technology-stack-summary)
+*   [5. Repository Structure](#5-repository-structure)
+*   [6. Documentation Index](#6-documentation-index)
+*   [7. Development Workflow](#7-development-workflow)
+*   [8. Getting Started](#8-getting-started)
+*   [9. Related Documents](#9-related-documents)
+*   [10. Revision History](#10-revision-history)
+
+---
+
+## 1. System Overview
 Grid Policy Orchestrator (GPO) is a policy-governed multi-agent decision support platform designed for electrical transmission and distribution utility control rooms. The system automates localized grid stabilization, DER (Distributed Energy Resource) dispatch, and load-balancing operations at millisecond speeds. By enforcing safety boundaries through an executable policy compiler, GPO bridges the gap between autonomous edge actions and strict utility compliance standards, reducing operator alert fatigue and securing grid topology structures against outage contingencies.
 
 ---
 
-## Vision
+## 2. Project Vision
 Our vision is to deliver a secure, self-healing grid control system where autonomous agents handle sub-second stability negotiations within strict policy boundaries, under the continuous oversight of utility control room dispatchers.
 
 For the complete product strategy, target personas, and validation metrics, refer to [docs/PRODUCT_VISION.md](docs/PRODUCT_VISION.md).
 
 ---
 
-## Features
+## 3. Key Features
 *   **Multi-Agent AI:** Decentralized edge agent negotiation loops for regional balancing.
 *   **Policy Engine:** Executable rules compiler that translates regulatory texts into system boundaries.
 *   **Digital Twin:** Real-time electrical schematic visualization of grid asset connections.
@@ -26,7 +50,7 @@ For the complete product strategy, target personas, and validation metrics, refe
 
 ---
 
-## Technology Stack
+## 4. Technology Stack Summary
 GPO's decoupled microservices stack is optimized for high-volume telemetry ingestion and fast rule compiling:
 *   **Frontend UI:** React and TypeScript leveraging high-density CSS variables.
 *   **Backend API:** FastAPI (Python) executing asynchronous endpoints and WebSocket feeds.
@@ -39,29 +63,7 @@ For detailed interface paths and microservice mappings, see [docs/ARCHITECTURE.m
 
 ---
 
-## Documentation
-
-All Phase 0 planning documents are stored inside the `docs/` directory:
-
-| Document File | Description |
-| :--- | :--- |
-| [docs/PRODUCT_VISION.md](docs/PRODUCT_VISION.md) | Product vision, target users, personas, and success metrics. |
-| [docs/BRAND_GUIDELINES.md](docs/BRAND_GUIDELINES.md) | Visual identity, monospaced typography, and color palette definitions. |
-| [docs/DESIGN_SYSTEM.md](docs/DESIGN_SYSTEM.md) | Core design system tokens, typography scales, and visual spacing rules. |
-| [design-tokens.json](design-tokens.json) | *Root File:* Compiled JSON tokens for color, typography, borders, and margins. |
-| [docs/UX_GUIDELINES.md](docs/UX_GUIDELINES.md) | UX guidelines, accessibility (WCAG AA), shortcuts, and error alerts. |
-| [docs/SCREEN_CATALOG.md](docs/SCREEN_CATALOG.md) | Directory of all application views, user permissions, and dependencies. |
-| [docs/COMPONENT_LIBRARY.md](docs/COMPONENT_LIBRARY.md) | Master inventory of all reusable visual and domain components. |
-| [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | System overview, module structures, and technology stack rationales. |
-| [docs/DATABASE_DESIGN.md](docs/DATABASE_DESIGN.md) | Database schemas, indexing guidelines, lifecycles, and tables. |
-| [docs/API_SPEC.md](docs/API_SPEC.md) | API endpoints, status codes, request schemas, and websocket flows. |
-| [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md) | Code styling, branching models, conventional commits, and workflows. |
-| [docs/AI_DEVELOPMENT_GUIDE.md](docs/AI_DEVELOPMENT_GUIDE.md) | System prompt templates, coding guidelines, and safety practices. |
-| [docs/ROADMAP.md](docs/ROADMAP.md) | Project roadmap outlining implementation schedules. |
-
----
-
-## Repository Structure
+## 5. Repository Structure
 
 ```
 aug1/
@@ -84,7 +86,29 @@ aug1/
 
 ---
 
-## Development Workflow
+## 6. Documentation Index
+
+All Phase 0 planning documents are stored inside the `docs/` directory:
+
+| Document File | Description |
+| :--- | :--- |
+| [docs/PRODUCT_VISION.md](docs/PRODUCT_VISION.md) | Product vision, target users, personas, and success metrics. |
+| [docs/BRAND_GUIDELINES.md](docs/BRAND_GUIDELINES.md) | Visual identity, monospaced typography, and color palette definitions. |
+| [docs/DESIGN_SYSTEM.md](docs/DESIGN_SYSTEM.md) | Core design system tokens, typography scales, and visual spacing rules. |
+| [design-tokens.json](design-tokens.json) | *Root File:* Compiled JSON tokens for color, typography, borders, and margins. |
+| [docs/UX_GUIDELINES.md](docs/UX_GUIDELINES.md) | UX guidelines, accessibility (WCAG AA), shortcuts, and error alerts. |
+| [docs/SCREEN_CATALOG.md](docs/SCREEN_CATALOG.md) | Directory of all application views, user permissions, and dependencies. |
+| [docs/COMPONENT_LIBRARY.md](docs/COMPONENT_LIBRARY.md) | Master inventory of all reusable visual and domain components. |
+| [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | System overview, module structures, and technology stack rationales. |
+| [docs/DATABASE_DESIGN.md](docs/DATABASE_DESIGN.md) | Database schemas, indexing guidelines, lifecycles, and tables. |
+| [docs/API_SPEC.md](docs/API_SPEC.md) | API endpoints, status codes, request schemas, and websocket flows. |
+| [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md) | Code styling, branching models, conventional commits, and workflows. |
+| [docs/AI_DEVELOPMENT_GUIDE.md](docs/AI_DEVELOPMENT_GUIDE.md) | System prompt templates, coding guidelines, and safety practices. |
+| [docs/ROADMAP.md](docs/ROADMAP.md) | Project roadmap outlining implementation schedules. |
+
+---
+
+## 7. Development Workflow
 All developments in the codebase follow a structured integration sequence:
 
 ```
@@ -105,7 +129,7 @@ All developments in the codebase follow a structured integration sequence:
 
 ---
 
-## Getting Started
+## 8. Getting Started
 To set up GPO for local development, follow these high-level steps:
 1.  **Clone Repository:** Access the repository inside the secure corporate firewall.
 2.  **Install Prerequisites:** Verify that local containers (Docker), Python, Node, and Julia environments are installed.
@@ -116,34 +140,16 @@ To set up GPO for local development, follow these high-level steps:
 
 ---
 
-## Contribution
-GPO follows a structured branching strategy (`main`, `development`, `feature/*`, `bugfix/*`). Pull requests require two approvals and passing tests. 
-
-For commit conventions, code formatting grids, and test specifications, refer to [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md).
-
----
-
-## AI Development
-AI-assisted coding is encouraged but must follow GPO's security, formatting, and structural constraints. All model prompts and verification workflows must conform to the rules in [docs/AI_DEVELOPMENT_GUIDE.md](docs/AI_DEVELOPMENT_GUIDE.md).
+## 9. Related Documents
+*   [docs/PRODUCT_VISION.md](docs/PRODUCT_VISION.md)
+*   [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
+*   [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md)
+*   [docs/AI_DEVELOPMENT_GUIDE.md](docs/AI_DEVELOPMENT_GUIDE.md)
 
 ---
 
-## Roadmap
-Core GPO milestones are divided into multi-phase steps:
-*   *Phase 0 (Planning):* Complete system specifications and architecture (Current).
-*   *Phase 1 (Core Services):* Compile backend engines and DNP3/Modbus adapters.
-*   *Phase 2 (Consensus Engine):* Implement multi-agent negotiation logic.
-*   *Phase 3 (Dashboard UI):* Build the React frontend using design tokens.
+## 10. Revision History
 
-Refer to [docs/ROADMAP.md](docs/ROADMAP.md) for detailed milestone schedules.
-
----
-
-## Security & License
-*   **Security:** This software controls electrical grid infrastructure and complies with NERC CIP cybersecurity perimeters. Vulnerabilities must be reported to `security@gpo.utility.org`.
-*   **License:** Proprietary - Licensed for Internal Utility Use Only.
-
----
-
-## Maintainers
-*   **GPO core team** (`gpo-core-devs@gpo.utility.org`)
+| Version | Date | Description | Author |
+| :--- | :--- | :--- | :--- |
+| v1.0.0 | July 22, 2026 | Initial Release for Phase 0 | Technical Writer |

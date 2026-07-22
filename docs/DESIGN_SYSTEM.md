@@ -1,4 +1,31 @@
-# Grid Policy Orchestrator (GPO) — Phase 0.3 Design System
+# Grid Policy Orchestrator (GPO)
+## Design System Specifications
+
+*   **Version:** v1.0.0
+*   **Status:** Approved
+*   **Owner:** Principal Design System Architect
+*   **Phase:** Phase 0.3
+*   **Last Updated:** July 22, 2026
+*   **Purpose:** Establishes visual design tokens, layout grids, components spacing, and typography scales for GPO.
+
+---
+
+## Table of Contents
+*   [1. Design Philosophy](#1-design-philosophy)
+*   [2. Color System](#2-color-system)
+*   [3. Typography](#3-typography)
+*   [4. Layout System](#4-layout-system)
+*   [5. Elevation & Shadows](#5-elevation--shadows)
+*   [6. Border & Radius System](#6-border--radius-system)
+*   [7. Visual States & Transitions](#7-visual-states--transitions)
+*   [8. Iconography](#8-iconography)
+*   [9. Data Visualization Standards](#9-data-visualization-standards)
+*   [10. Accessibility Compliance](#10-accessibility-compliance)
+*   [11. Design Tokens Reference](#11-design-tokens-reference)
+*   [12. Related Documents](#12-related-documents)
+*   [13. Revision History](#13-revision-history)
+
+---
 
 This document serves as the permanent visual and structural source of truth for the Grid Policy Orchestrator (GPO) platform. It translates the brand guidelines established in Phase 0.2 into a comprehensive, engineering-first, data-dense design system. 
 
@@ -552,7 +579,7 @@ GPO adheres to NERC CIP control guidelines and WCAG 2.1 AA accessibility perimet
 
 ## 11. Design Tokens Reference
 
-The full token tree is defined in the companion file at [design-tokens.json](file:///c:/Users/Kalyan/OneDrive/Documents/Desktop/aug1/design-tokens.json). Use these values in compile scripts or stylesheets:
+The full token tree is defined in the companion file at [design-tokens.json](../design-tokens.json). Use these values in compile scripts or stylesheets:
 
 ```json
 {
@@ -585,3 +612,19 @@ The full token tree is defined in the companion file at [design-tokens.json](fil
   }
 }
 ```
+
+---
+
+## 12. Related Documents
+*   [Brand Guidelines](BRAND_GUIDELINES.md)
+*   [User Experience Standards](UX_GUIDELINES.md)
+*   [Reusable Component Library](COMPONENT_LIBRARY.md)
+*   [design-tokens.json](../design-tokens.json)
+
+---
+
+## 13. Revision History
+
+| Version | Date | Description | Author |
+| :--- | :--- | :--- | :--- |
+| v1.0.0 | July 22, 2026 | Initial Release for Phase 0 | Principal Design System Architect |

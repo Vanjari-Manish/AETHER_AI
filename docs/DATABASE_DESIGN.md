@@ -1,6 +1,44 @@
-# Grid Policy Orchestrator (GPO) — Phase 0.8 Database Design
+# Grid Policy Orchestrator (GPO)
+## Database & Schema Design
 
-This document defines the database architecture and transactional schemas for the Grid Policy Orchestrator (GPO) platform. It serves as the master specification for database tables, indexes, relationships, data lifecycle, and security policies before implementation begins.
+*   **Version:** v1.0.0
+*   **Status:** Approved
+*   **Owner:** Principal Database Architect
+*   **Phase:** Phase 0.8
+*   **Last Updated:** July 22, 2026
+*   **Purpose:** Defines relational tables, indexes, data caching, lifecycle retention rules, and cryptographic security protocols.
+
+---
+
+## Table of Contents
+*   [1. Database Overview](#1-database-overview)
+    *   [1.1 Database Philosophy](#11-database-philosophy)
+    *   [1.2 Data Architecture Goals](#12-data-architecture-goals)
+    *   [1.3 Storage Strategy](#13-storage-strategy)
+    *   [1.4 Design Principles](#14-design-principles)
+*   [2. Database Technology](#2-database-technology)
+*   [3. Entity Relationship Overview](#3-entity-relationship-overview)
+*   [4. Database Schema](#4-database-schema)
+    *   [4.1 Authentication Tables](#41-authentication-tables)
+    *   [4.2 System Tables](#42-system-tables)
+    *   [4.3 Simulation Tables](#43-simulation-tables)
+    *   [4.4 Policy Tables](#44-policy-tables)
+    *   [4.5 AI Subsystem Tables](#45-ai-subsystem-tables)
+    *   [4.6 Analytics & Reporting Tables](#46-analytics--reporting-tables)
+    *   [4.7 Logically Added Enterprise Tables](#47-logically-added-enterprise-tables)
+*   [5. Relationships](#5-relationships)
+    *   [5.1 One-to-One Relationships](#51-one-to-one-relationships)
+    *   [5.2 One-to-Many Relationships](#52-one-to-many-relationships)
+    *   [5.3 Many-to-Many Relationships](#53-many-to-many-relationships)
+*   [6. Indexing Strategy](#6-indexing-strategy)
+*   [7. Naming Conventions](#7-naming-conventions)
+*   [8. Seed Data Strategy](#8-seed-data-strategy)
+*   [9. Data Lifecycle](#9-data-lifecycle)
+*   [10. Performance Strategy](#10-performance-strategy)
+*   [11. Security](#11-security)
+*   [12. Future Scalability](#12-future-scalability)
+*   [13. Related Documents](#13-related-documents)
+*   [14. Revision History](#14-revision-history)
 
 ---
 
@@ -490,3 +528,19 @@ GPO's schema is structured around six core logical domains: User Authentication,
 *   **Simulation Scaling:** Simulation logs are written to isolated target instances, preventing write bottlenecks on primary tables.
 *   **AI Agent Expansion:** Node agent memory is cached in Redis, decoupling agent communication from primary database transactions.
 *   **Historical Data Growth:** Time-series partitions are archived to object storage, keeping primary tables lightweight and fast.
+
+---
+
+## 13. Related Documents
+*   [Technical Architecture Specification](ARCHITECTURE.md)
+*   [API Specification Contract](API_SPEC.md)
+*   [Screen Inventory & Flow Catalog](SCREEN_CATALOG.md)
+*   [Development & Git Standards](CONTRIBUTING.md)
+
+---
+
+## 14. Revision History
+
+| Version | Date | Description | Author |
+| :--- | :--- | :--- | :--- |
+| v1.0.0 | July 22, 2026 | Initial Release for Phase 0 | Principal Database Architect |

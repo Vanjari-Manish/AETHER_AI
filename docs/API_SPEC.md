@@ -1,6 +1,49 @@
-# Grid Policy Orchestrator (GPO) — Phase 0.9 API Specification
+# Grid Policy Orchestrator (GPO)
+## API Specification Contract
 
-This document defines the official API contract for the Grid Policy Orchestrator (GPO) platform. It establishes the communication standards between the frontend dashboard, backend services, multi-agent AI loops, and external industrial SCADA adapters before development begins.
+*   **Version:** v1.0.0
+*   **Status:** Approved
+*   **Owner:** Principal API Architect / Backend Architect
+*   **Phase:** Phase 0.9
+*   **Last Updated:** July 22, 2026
+*   **Purpose:** Outlines RESTful and WebSocket API contracts, response wrappers, validation, error formats, and external integrations.
+
+---
+
+## Table of Contents
+*   [1. API Overview](#1-api-overview)
+    *   [1.1 API Philosophy](#11-api-philosophy)
+    *   [1.2 Design Principles](#12-design-principles)
+    *   [1.3 REST Conventions](#13-rest-conventions)
+    *   [1.4 Naming Standards](#14-naming-standards)
+    *   [1.5 Resource Organization](#15-resource-organization)
+*   [2. API Versioning](#2-api-versioning)
+*   [3. Authentication & Authorization](#3-authentication--authorization)
+*   [4. Standard Request Format](#4-standard-request-format)
+*   [5. Standard Response Format](#5-standard-response-format)
+    *   [5.1 Success Response Structure](#51-success-response-structure)
+    *   [5.2 Error Response Structure](#52-error-response-structure)
+*   [6. Error Handling](#6-error-handling)
+*   [7. Endpoint Groups](#7-endpoint-groups)
+    *   [7.1 Authentication Group](#71-authentication-group)
+    *   [7.2 Users Group](#72-users-group)
+    *   [7.3 Dashboard Group](#73-dashboard-group)
+    *   [7.4 Digital Twin Group](#74-digital-twin-group)
+    *   [7.5 Grid Assets Group](#75-grid-assets-group)
+    *   [7.6 Scenarios Group](#76-scenarios-group)
+    *   [7.7 Simulation Group](#77-simulation-group)
+    *   [7.8 Policies Group](#78-policies-group)
+    *   [7.9 AI Group](#79-ai-group)
+    *   [7.10 Analytics Group](#710-analytics-group)
+    *   [7.11 Notifications Group](#711-notifications-group)
+    *   [7.12 Audit Logs Group](#712-audit-logs-group)
+    *   [7.13 Administration Group](#713-administration-group)
+    *   [7.14 Health Group](#714-health-group)
+*   [8. External Integrations](#8-external-integrations)
+*   [9. Security Standards](#9-security-standards)
+*   [10. API Best Practices](#10-api-best-practices)
+*   [11. Related Documents](#11-related-documents)
+*   [12. Revision History](#12-revision-history)
 
 ---
 
@@ -698,3 +741,19 @@ Every failed request returns:
 *   **Caching Strategy:** Static config data (policies, system settings) are cached in Redis. Responses return standard `Cache-Control` headers.
 *   **Consistent Naming:** Unified PascalCase for component exports, snake_case/kebab-case for URL endpoints, and camelCase for JSON properties.
 *   **Backward Compatibility:** Prior version paths (e.g., `/api/v1`) remain active and functional during incremental minor updates.
+
+---
+
+## 11. Related Documents
+*   [Technical Architecture Specification](ARCHITECTURE.md)
+*   [Database & Schema Design](DATABASE_DESIGN.md)
+*   [Screen Inventory & Flow Catalog](SCREEN_CATALOG.md)
+*   [Development & Git Standards](CONTRIBUTING.md)
+
+---
+
+## 12. Revision History
+
+| Version | Date | Description | Author |
+| :--- | :--- | :--- | :--- |
+| v1.0.0 | July 22, 2026 | Initial Release for Phase 0 | Principal API Architect |
