@@ -8,7 +8,7 @@ Grid Policy Orchestrator (GPO) is a policy-governed multi-agent decision support
 ## Vision
 Our vision is to deliver a secure, self-healing grid control system where autonomous agents handle sub-second stability negotiations within strict policy boundaries, under the continuous oversight of utility control room dispatchers.
 
-For the complete product strategy, target personas, and validation metrics, refer to [PRODUCT_VISION.md](PRODUCT_VISION.md).
+For the complete product strategy, target personas, and validation metrics, refer to [docs/PRODUCT_VISION.md](docs/PRODUCT_VISION.md).
 
 ---
 
@@ -35,27 +35,29 @@ GPO's decoupled microservices stack is optimized for high-volume telemetry inges
 *   **Databases:** PostgreSQL (transactions, configs), Qdrant (vectors), and Redis (caching, agent memory).
 *   **Deployment:** Containerized pipelines hosted in high-availability Kubernetes clusters.
 
-For detailed interface paths and microservice mappings, see [ARCHITECTURE.md](ARCHITECTURE.md).
+For detailed interface paths and microservice mappings, see [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
 ---
 
 ## Documentation
 
+All Phase 0 planning documents are stored inside the `docs/` directory:
+
 | Document File | Description |
 | :--- | :--- |
-| [PRODUCT_VISION.md](PRODUCT_VISION.md) | Product vision, target users, personas, and success metrics. |
-| [BRAND_GUIDELINES.md](BRAND_GUIDELINES.md) | Visual identity, monospaced typography, and color palette definitions. |
-| [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md) | Core design system tokens, typography scales, and visual spacing rules. |
-| [design-tokens.json](design-tokens.json) | Compiled JSON tokens for color, typography, borders, and margins. |
-| [UX_GUIDELINES.md](UX_GUIDELINES.md) | UX guidelines, accessibility (WCAG AA), shortcuts, and error alerts. |
-| [SCREEN_CATALOG.md](SCREEN_CATALOG.md) | Directory of all application views, user permissions, and dependencies. |
-| [COMPONENT_LIBRARY.md](COMPONENT_LIBRARY.md) | Master inventory of all reusable visual and domain components. |
-| [ARCHITECTURE.md](ARCHITECTURE.md) | System overview, module structures, and technology stack rationales. |
-| [DATABASE_DESIGN.md](DATABASE_DESIGN.md) | Database schemas, indexing guidelines, lifecycles, and tables. |
-| [API_SPEC.md](API_SPEC.md) | API endpoints, status codes, request schemas, and websocket flows. |
-| [CONTRIBUTING.md](CONTRIBUTING.md) | Code styling, branching models, conventional commits, and workflows. |
-| [AI_DEVELOPMENT_GUIDE.md](AI_DEVELOPMENT_GUIDE.md) | System prompt templates, coding guidelines, and safety practices. |
-| [ROADMAP.md](ROADMAP.md) | *Future Document:* Detailed multi-phase roadmap. |
+| [docs/PRODUCT_VISION.md](docs/PRODUCT_VISION.md) | Product vision, target users, personas, and success metrics. |
+| [docs/BRAND_GUIDELINES.md](docs/BRAND_GUIDELINES.md) | Visual identity, monospaced typography, and color palette definitions. |
+| [docs/DESIGN_SYSTEM.md](docs/DESIGN_SYSTEM.md) | Core design system tokens, typography scales, and visual spacing rules. |
+| [design-tokens.json](design-tokens.json) | *Root File:* Compiled JSON tokens for color, typography, borders, and margins. |
+| [docs/UX_GUIDELINES.md](docs/UX_GUIDELINES.md) | UX guidelines, accessibility (WCAG AA), shortcuts, and error alerts. |
+| [docs/SCREEN_CATALOG.md](docs/SCREEN_CATALOG.md) | Directory of all application views, user permissions, and dependencies. |
+| [docs/COMPONENT_LIBRARY.md](docs/COMPONENT_LIBRARY.md) | Master inventory of all reusable visual and domain components. |
+| [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | System overview, module structures, and technology stack rationales. |
+| [docs/DATABASE_DESIGN.md](docs/DATABASE_DESIGN.md) | Database schemas, indexing guidelines, lifecycles, and tables. |
+| [docs/API_SPEC.md](docs/API_SPEC.md) | API endpoints, status codes, request schemas, and websocket flows. |
+| [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md) | Code styling, branching models, conventional commits, and workflows. |
+| [docs/AI_DEVELOPMENT_GUIDE.md](docs/AI_DEVELOPMENT_GUIDE.md) | System prompt templates, coding guidelines, and safety practices. |
+| [docs/ROADMAP.md](docs/ROADMAP.md) | Project roadmap outlining implementation schedules. |
 
 ---
 
@@ -63,18 +65,20 @@ For detailed interface paths and microservice mappings, see [ARCHITECTURE.md](AR
 
 ```
 aug1/
-├── BRAND_GUIDELINES.md       # Color profiles and brand attributes
-├── PRODUCT_VISION.md         # Strategy, scopes, and target personas
-├── DESIGN_SYSTEM.md          # Visual tokens and typography hierarchies
-├── design-tokens.json        # Compiled design parameters schema
-├── UX_GUIDELINES.md          # Accessibility rules and standard alerts
-├── SCREEN_CATALOG.md         # Directory of views and permission maps
-├── COMPONENT_LIBRARY.md      # UI components and domain assets
-├── ARCHITECTURE.md           # System components and stack definitions
-├── DATABASE_DESIGN.md        # Database schema specifications
-├── API_SPEC.md               # API endpoints contract
-├── CONTRIBUTING.md           # Git branching and conventional commits
-├── AI_DEVELOPMENT_GUIDE.md   # Prompt templates and safety guidelines
+├── docs/                     # Engineering specifications directory
+│   ├── PRODUCT_VISION.md     # Strategy, scopes, and target personas
+│   ├── BRAND_GUIDELINES.md   # Color profiles and brand attributes
+│   ├── DESIGN_SYSTEM.md      # Visual tokens and typography hierarchies
+│   ├── UX_GUIDELINES.md      # Accessibility rules and standard alerts
+│   ├── SCREEN_CATALOG.md     # Directory of views and permission maps
+│   ├── COMPONENT_LIBRARY.md  # UI components and domain assets
+│   ├── ARCHITECTURE.md       # System components and stack definitions
+│   ├── DATABASE_DESIGN.md    # Database schema specifications
+│   ├── API_SPEC.md           # API endpoints contract
+│   ├── CONTRIBUTING.md       # Git branching and conventional commits
+│   ├── AI_DEVELOPMENT_GUIDE.md # Prompt templates and safety guidelines
+│   └── ROADMAP.md            # Product roadmap and phase schedules
+├── design-tokens.json        # Compiled design parameters schema (Root)
 └── README.md                 # Project landing page
 ```
 
@@ -115,12 +119,12 @@ To set up GPO for local development, follow these high-level steps:
 ## Contribution
 GPO follows a structured branching strategy (`main`, `development`, `feature/*`, `bugfix/*`). Pull requests require two approvals and passing tests. 
 
-For commit conventions, code formatting grids, and test specifications, refer to [CONTRIBUTING.md](CONTRIBUTING.md).
+For commit conventions, code formatting grids, and test specifications, refer to [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md).
 
 ---
 
 ## AI Development
-AI-assisted coding is encouraged but must follow GPO's security, formatting, and structural constraints. All model prompts and verification workflows must conform to the rules in [AI_DEVELOPMENT_GUIDE.md](AI_DEVELOPMENT_GUIDE.md).
+AI-assisted coding is encouraged but must follow GPO's security, formatting, and structural constraints. All model prompts and verification workflows must conform to the rules in [docs/AI_DEVELOPMENT_GUIDE.md](docs/AI_DEVELOPMENT_GUIDE.md).
 
 ---
 
@@ -131,7 +135,7 @@ Core GPO milestones are divided into multi-phase steps:
 *   *Phase 2 (Consensus Engine):* Implement multi-agent negotiation logic.
 *   *Phase 3 (Dashboard UI):* Build the React frontend using design tokens.
 
-Refer to `docs/ROADMAP.md` for detailed milestone schedules.
+Refer to [docs/ROADMAP.md](docs/ROADMAP.md) for detailed milestone schedules.
 
 ---
 
