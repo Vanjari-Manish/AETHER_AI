@@ -753,7 +753,7 @@ Developers and designers must reuse these components to ensure absolute operatio
 *   **Props:**
     *   `layoutType` — Enum
 *   **Variants:** Table row, Card block.
-*   **States:** Fading loop.
+*   **States:** Fading loop. Pulse timings and fade transitions are governed by [docs/MOTION_GUIDELINES.md](MOTION_GUIDELINES.md).
 *   **Accessibility:** Excluded from screen reader index during load.
 *   **Usage Guidelines:**
     *   *When to use:* Loading KPI values.
@@ -766,7 +766,7 @@ Developers and designers must reuse these components to ensure absolute operatio
 *   **Props:**
     *   `size` — Enum
 *   **Variants:** Small, Medium.
-*   **States:** Rotating loop.
+*   **States:** Rotating loop. Rotation timing and easing are governed by [docs/MOTION_GUIDELINES.md](MOTION_GUIDELINES.md).
 *   **Accessibility:** Linked to `aria-live`.
 *   **Usage Guidelines:**
     *   *When to use:* Button loading states.
@@ -1097,7 +1097,7 @@ To support the requirements of a NERC CIP-compliant control room and simulation 
     *   `zoomLevel` — Float
     *   `selectedNodeId` — String
 *   **Variants:** Read-Only, Fully Interactive.
-*   **States:** Loading, Idle, Node Hover, Node Selected.
+*   **States:** Loading, Idle, Node Hover, Node Selected. Hover highlights, selection indicators, and pan/zoom easing follow [docs/MOTION_GUIDELINES.md](MOTION_GUIDELINES.md).
 *   **Accessibility:** Keyboard support (tab navigates nodes, Space/Enter selects). Arrow keys pan; plus/minus keys zoom.
 *   **Usage Guidelines:**
     *   *When to use:* Main Topology Map and Simulation canvases.
@@ -1111,7 +1111,7 @@ To support the requirements of a NERC CIP-compliant control room and simulation 
     *   `logBuffer` (Stream of trace events) — Array
     *   `autoScroll` — Boolean
 *   **Variants:** Inline card console, Drawer console.
-*   **States:** Idle, Streaming, Paused.
+*   **States:** Idle, Streaming, Paused. Streaming scroll containment and console buffer updates follow [docs/MOTION_GUIDELINES.md](MOTION_GUIDELINES.md).
 *   **Accessibility:** Keyboard selection of raw console text. Uses `role="log"`.
 *   **Usage Guidelines:**
     *   *When to use:* Policy Studio compile output, simulation run logs.
@@ -1137,6 +1137,7 @@ To support the requirements of a NERC CIP-compliant control room and simulation 
 *   [User Experience Standards](UX_GUIDELINES.md)
 *   [Screen Inventory & Flow Catalog](SCREEN_CATALOG.md)
 *   [Technical Architecture Specification](ARCHITECTURE.md)
+*   [Motion Guidelines](MOTION_GUIDELINES.md)
 
 ---
 
@@ -1145,3 +1146,4 @@ To support the requirements of a NERC CIP-compliant control room and simulation 
 | Version | Date | Description | Author |
 | :--- | :--- | :--- | :--- |
 | v1.0.0 | July 22, 2026 | Initial Release for Phase 0 | Enterprise UI Component Architect |
+| v1.0.1 | July 23, 2026 | Integrated motion behavior references to MOTION_GUIDELINES.md | Enterprise UI Component Architect |

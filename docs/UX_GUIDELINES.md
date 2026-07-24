@@ -334,21 +334,21 @@ Empty state screens explain what is missing and guide the user on how to proceed
 GPO visualizes loading states to reassure operators that data is processing.
 
 *   **Skeleton Loaders:**
-    *   Replace tables, KPIs, and card areas during loading with flat, fading gray blocks (fading between `#151A21` and `#1C222B`).
+    *   Replace tables, KPIs, and card areas during loading with flat, pulsing gray blocks. Timing, transitions, and pulsing loops are defined in the [docs/MOTION_GUIDELINES.md](MOTION_GUIDELINES.md) specification.
 *   **Progress Indicators:**
-    *   *Under 1.5 seconds:* Display a simple status spinner (Orange track).
-    *   *Over 1.5 seconds:* Display a horizontal progress bar showing percent completion (e.g., `Deploying policy: 45%`).
+    *   *Under 1.5 seconds:* Display a simple status spinner. Easing and timing properties are governed by the [docs/MOTION_GUIDELINES.md](MOTION_GUIDELINES.md) specification.
+    *   *Over 1.5 seconds:* Display a horizontal progress bar showing percent completion (e.g., `Deploying policy: 45%`). Progress animation states are governed by the [docs/MOTION_GUIDELINES.md](MOTION_GUIDELINES.md) specification.
 *   **AI & Simulation Processing:**
-    *   Display a monospaced log console showing current step validation (e.g., `COMPILING RULE NEGO_03... [OK]`).
+    *   Display a monospaced log console showing current step validation (e.g., `COMPILING RULE NEGO_03... [OK]`). Scroll alignment and display transitions follow [docs/MOTION_GUIDELINES.md](MOTION_GUIDELINES.md).
 
 ---
 
 ## 14. Notifications
 
-Notifications communicate system updates without interrupting active workflows.
+Notifications communicate system updates without interrupting active workflows. For detailed entrance, exit, and vertical reordering animation rules, see the official [docs/MOTION_GUIDELINES.md](MOTION_GUIDELINES.md) specification.
 
 *   **Toast Placements:**
-    *   Appear at the top-right of the viewport. Multiple notifications stack vertically (max 4).
+    *   Appear at the top-right of the viewport. Multiple notifications stack vertically (max 4). Slide-in and reordering transitions are governed by [docs/MOTION_GUIDELINES.md](MOTION_GUIDELINES.md).
 *   **Notification Sizing & Spacing:**
     *   Width: `320px`. Border: `1px` solid, matching the notification category.
 
@@ -367,7 +367,7 @@ Notifications communicate system updates without interrupting active workflows.
     *   *Duration:* Persistent. Dismissible by operator.
     *   *Usage:* Telemetry lag, minor sags.
 *   **Error / Critical Alert (Top Banner):**
-    *   *Border:* Pulsing Grid Red (`#EF4444`).
+    *   *Border:* Pulsing Grid Red (`#EF4444`). Pulse rate and banner entrance animations follow [docs/MOTION_GUIDELINES.md](MOTION_GUIDELINES.md).
     *   *Duration:* Persistent. Requires operator acknowledgment to dismiss.
     *   *Usage:* Tripped breakers, NERC policy violations, system disconnects.
 
@@ -389,8 +389,9 @@ Developers and designers working on GPO must follow these best practices:
 ## 16. Related Documents
 *   [Product Vision](PRODUCT_VISION.md)
 *   [Design System Specifications](DESIGN_SYSTEM.md)
-*   [Screen Inventory & Flow Catalog](SCREEN_CATALOG.md)
+*   [User Experience Standards](UX_GUIDELINES.md)
 *   [Reusable Component Library](COMPONENT_LIBRARY.md)
+*   [Motion Guidelines](MOTION_GUIDELINES.md)
 
 ---
 
@@ -399,3 +400,4 @@ Developers and designers working on GPO must follow these best practices:
 | Version | Date | Description | Author |
 | :--- | :--- | :--- | :--- |
 | v1.0.0 | July 22, 2026 | Initial Release for Phase 0 | Enterprise UX Architect |
+| v1.0.1 | July 23, 2026 | Delegated loading and notification motion to MOTION_GUIDELINES.md | Enterprise UX Architect |

@@ -336,6 +336,7 @@ Instructions: Trace the code execution path and add clear comments explaining th
 
 *   **Never Duplicate Code:** If a logic block or utility function is needed in multiple places, refactor it into a shared helper module.
 *   **Reuse Existing Components:** Check COMPONENT_LIBRARY.md before writing HTML/CSS code.
+*   **Respect Motion Standards:** All UI animations, transitions, timings, easing curves, loading states, and micro-interactions must adhere strictly to the rules in [docs/MOTION_GUIDELINES.md](MOTION_GUIDELINES.md).
 *   **Follow Naming Conventions:** Variable and file names must match the guidelines in CONTRIBUTING.md.
 *   **Follow Architecture:** Never place database queries in UI files or API routing code in agent scripts.
 *   **Keep Functions Focused:** A function must perform one task and do it cleanly.
@@ -443,6 +444,7 @@ Review all AI-generated code against these criteria:
 *   [Technical Architecture Specification](ARCHITECTURE.md)
 *   [API Specification Contract](API_SPEC.md)
 *   [Reusable Component Library](COMPONENT_LIBRARY.md)
+*   [Motion Guidelines](MOTION_GUIDELINES.md)
 
 ---
 
@@ -451,3 +453,4 @@ Review all AI-generated code against these criteria:
 | Version | Date | Description | Author |
 | :--- | :--- | :--- | :--- |
 | v1.0.0 | July 22, 2026 | Initial Release for Phase 0 | Prompt Engineering Expert |
+| v1.0.1 | July 23, 2026 | Integrated motion constraints reference to MOTION_GUIDELINES.md | Prompt Engineering Expert |

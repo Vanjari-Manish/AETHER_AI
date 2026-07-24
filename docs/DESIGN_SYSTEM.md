@@ -56,7 +56,7 @@ Never rely on color alone to communicate critical system states. All visual alar
 All spacing, padding, layout grids, and visual states are locked to a strict mathematical scale. Consistency across all application layers reduces cognitive load, helping operators respond faster during emergencies.
 
 ### 1.7 Minimal Motion
-Transitions must be fast and predictable. Motion is limited to instant fades and slider actions (under 150ms). Bouncing, looping, or complex animation sequences are prohibited.
+Transitions and animations must follow a highly restricted, functional motion language. For comprehensive motion timing, easing curves, scroll containment, and interface interaction behaviors, refer to the official [docs/MOTION_GUIDELINES.md](MOTION_GUIDELINES.md) authority. Bouncing, looping, or complex animation sequences are prohibited.
 
 ---
 
@@ -517,13 +517,13 @@ Consistent state styling ensures that operators can immediately distinguish inte
 ### 7.1 Visual Specifications
 
 *   **Default State:** Component uses base border `#2A313C` and Secondary Text `#94A3B8`. Standard cursor.
-*   **Hover State:** Component border shifts to Energy Orange (`#FF7A1A`). Pointer cursor. Fast transition (`120ms`).
+*   **Hover State:** Component border shifts to Energy Orange (`#FF7A1A`). Pointer cursor. Timing and easing properties are governed by the [docs/MOTION_GUIDELINES.md](MOTION_GUIDELINES.md) specification.
 *   **Focus State:** Component is outlined with a `2px` thick focus ring in color `#3B82F6` with a `2px` offset. Prevents border overlaps.
 *   **Pressed State:** Component background shifts down to dark graphite (`#151A21`). Font color shifts to white (`#F8FAFC`).
 *   **Selected State:** Component inherits Primary Accent Orange border highlight on its left edge. Background uses Elevated Surface.
 *   **Active State:** Component retains active orange highlight. Text uses white `#F8FAFC`.
 *   **Disabled State:** Component background uses `#0F1318`. Text uses `#475569`. Not focusable. Cursor is forbidden.
-*   **Loading State:** Telemetry values are replaced with flat loading skeletons (Elevated Surface fills). Cursor is wait spinner.
+*   **Loading State:** Telemetry values are replaced with flat loading skeletons (Elevated Surface fills). Cursor is wait spinner. Pulse timings, fade animations, and progress bar speeds are governed by [docs/MOTION_GUIDELINES.md](MOTION_GUIDELINES.md).
 *   **Success State:** Component status badge uses Grid Green (`#22C55E`) text and border.
 *   **Warning State:** Component status badge uses Warning Amber (`#F59E0B`) text and border.
 *   **Error State:** Component status badge uses Grid Red (`#EF4444`) text and border.
@@ -619,6 +619,7 @@ The full token tree is defined in the companion file at [design-tokens.json](../
 *   [Brand Guidelines](BRAND_GUIDELINES.md)
 *   [User Experience Standards](UX_GUIDELINES.md)
 *   [Reusable Component Library](COMPONENT_LIBRARY.md)
+*   [Motion Guidelines](MOTION_GUIDELINES.md)
 *   [design-tokens.json](../design-tokens.json)
 
 ---
@@ -628,3 +629,4 @@ The full token tree is defined in the companion file at [design-tokens.json](../
 | Version | Date | Description | Author |
 | :--- | :--- | :--- | :--- |
 | v1.0.0 | July 22, 2026 | Initial Release for Phase 0 | Principal Design System Architect |
+| v1.0.1 | July 23, 2026 | Delegated motion parameters to MOTION_GUIDELINES.md | Principal Design System Architect |

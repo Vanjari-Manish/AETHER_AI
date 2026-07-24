@@ -79,7 +79,8 @@ aug1/
 │   ├── API_SPEC.md           # API endpoints contract
 │   ├── CONTRIBUTING.md       # Git branching and conventional commits
 │   ├── AI_DEVELOPMENT_GUIDE.md # Prompt templates and safety guidelines
-│   └── ROADMAP.md            # Product roadmap and phase schedules
+│   ├── ROADMAP.md            # Product roadmap and phase schedules
+│   └── MOTION_GUIDELINES.md  # Timing, easing, scroll, and micro-interactions
 ├── design-tokens.json        # Compiled design parameters schema (Root)
 └── README.md                 # Project landing page
 ```
@@ -105,6 +106,7 @@ All Phase 0 planning documents are stored inside the `docs/` directory:
 | [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md) | Code styling, branching models, conventional commits, and workflows. |
 | [docs/AI_DEVELOPMENT_GUIDE.md](docs/AI_DEVELOPMENT_GUIDE.md) | System prompt templates, coding guidelines, and safety practices. |
 | [docs/ROADMAP.md](docs/ROADMAP.md) | Project roadmap outlining implementation schedules. |
+| [docs/MOTION_GUIDELINES.md](docs/MOTION_GUIDELINES.md) | Timings, easing curves, transition rules, and micro-interactions. |
 
 ---
 
@@ -145,6 +147,7 @@ To set up GPO for local development, follow these high-level steps:
 *   [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
 *   [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md)
 *   [docs/AI_DEVELOPMENT_GUIDE.md](docs/AI_DEVELOPMENT_GUIDE.md)
+*   [docs/MOTION_GUIDELINES.md](docs/MOTION_GUIDELINES.md)
 
 ---
 
@@ -153,3 +156,4 @@ To set up GPO for local development, follow these high-level steps:
 | Version | Date | Description | Author |
 | :--- | :--- | :--- | :--- |
 | v1.0.0 | July 22, 2026 | Initial Release for Phase 0 | Technical Writer |
+| v1.0.1 | July 23, 2026 | Added GPO Motion Design Specification | Principal UX Architect |

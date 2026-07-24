@@ -35,6 +35,7 @@
     *   `API_SPEC.md` (RESTful & WebSocket API Spec Contracts)
     *   `CONTRIBUTING.md` (Dev Standards, Git Branching, and Commits)
     *   `AI_DEVELOPMENT_GUIDE.md` (AI Collaborative Prompt Handbooks)
+    *   `MOTION_GUIDELINES.md` (Motion & Interaction Design Guidelines)
 
 ---
 
@@ -82,6 +83,7 @@
 *   [Product Vision](PRODUCT_VISION.md)
 *   [Technical Architecture Specification](ARCHITECTURE.md)
 *   [Development & Git Standards](CONTRIBUTING.md)
+*   [Motion Guidelines](MOTION_GUIDELINES.md)
 
 ---
 
@@ -90,3 +92,4 @@
 | Version | Date | Description | Author |
 | :--- | :--- | :--- | :--- |
 | v1.0.0 | July 22, 2026 | Initial Release for Phase 0 | Product Release Manager |
+| v1.0.1 | July 23, 2026 | Added GPO Motion Design Specification to Phase 0 | Product Release Manager |
