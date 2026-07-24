@@ -11,6 +11,7 @@ class BaseModelMixin:
     """
     id = Column(Integer, primary_key=True, index=True, autoincrement=True)
     status = Column(String(50), nullable=False, default="active")
+    version = Column(Integer, nullable=False, default=1)
     is_deleted = Column(Boolean, nullable=False, default=False)
     created_at = Column(DateTime, default=datetime.utcnow, nullable=False)
     updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow, nullable=False)

@@ -2,6 +2,7 @@ import { Suspense, lazy } from "react";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "@/context/ThemeContext";
 import { AuthProvider } from "@/context/AuthContext";
+import { TelemetryProvider } from "@/context/TelemetryContext";
 import { ErrorBoundary } from "@/core/ErrorBoundary";
 import { Layout } from "@/core/Layout";
 import { LoadingPlaceholder } from "@/core/LoadingPlaceholder";
@@ -18,6 +19,8 @@ const Home = lazy(() => import("@/routes/Home"));
 const Login = lazy(() => import("@/routes/Login"));
 const Register = lazy(() => import("@/routes/Register"));
 const Unauthorized = lazy(() => import("@/routes/Unauthorized"));
+const GridOverview = lazy(() => import("@/routes/GridOverview"));
+const AssetWorkspace = lazy(() => import("@/assets/AssetWorkspace"));
 
 // Reusable technical placeholder page for restricted modules
 function PlaceholderPage({ title, permission }: { title: string; permission: string }) {
@@ -55,9 +58,10 @@ export default function App() {
     <ErrorBoundary>
       <ThemeProvider>
         <AuthProvider>
-          <HashRouter>
-            <Suspense fallback={<LoadingPlaceholder />}>
-              <Routes>
+          <TelemetryProvider>
+            <HashRouter>
+              <Suspense fallback={<LoadingPlaceholder />}>
+                <Routes>
                 {/* Public Auth Routes */}
                 <Route
                   path="/login"
@@ -95,7 +99,7 @@ export default function App() {
                     <ProtectedRoute>
                       <PermissionGuard requiredPermission="grid:view">
                         <Layout>
-                          <PlaceholderPage title="Grid Overview" permission="grid:view" />
+                          <GridOverview />
                         </Layout>
                       </PermissionGuard>
                     </ProtectedRoute>
@@ -107,7 +111,7 @@ export default function App() {
                     <ProtectedRoute>
                       <PermissionGuard requiredPermission="assets:view">
                         <Layout>
-                          <PlaceholderPage title="Grid Assets" permission="assets:view" />
+                          <AssetWorkspace />
                         </Layout>
                       </PermissionGuard>
                     </ProtectedRoute>
@@ -196,6 +200,7 @@ export default function App() {
               </Routes>
             </Suspense>
           </HashRouter>
+          </TelemetryProvider>
         </AuthProvider>
       </ThemeProvider>
     </ErrorBoundary>

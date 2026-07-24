@@ -6,6 +6,7 @@ from app.repositories.system_repository import RoleRepository, OrganizationRepos
 from app.schemas.auth_schemas import UserRegister, UserLogin, Token, UserResponse, ProfileResponse
 from app.core.security import verify_password, get_password_hash, create_access_token, get_current_user
 from app.core.response import send_success, send_error
+from app.config.settings import settings
 import logging
 
 logger = logging.getLogger("gpo.api.auth")
