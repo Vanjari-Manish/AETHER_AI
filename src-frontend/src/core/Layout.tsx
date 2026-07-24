@@ -1,13 +1,13 @@
 import { ReactNode, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
+import { useAuth } from "../hooks/useAuth";
+import { useAuthorization } from "../hooks/useAuthorization";
 import {
   LayoutDashboard,
   Network,
   Building2,
-  Cable,
   Shield,
-  Box,
-  Brain,
   BarChart3,
   FileText,
   Bell,
@@ -17,6 +17,8 @@ import {
   ShieldCheck,
   Activity,
   Terminal,
+  LogOut,
+  Lock,
 } from "lucide-react";
 
 interface LayoutProps {
@@ -25,6 +27,16 @@ interface LayoutProps {
 
 export function Layout({ children }: LayoutProps) {
   const { theme, toggleTheme } = useTheme();
+  const { profile, signOut } = useAuth();
+  const { checkPermission } = useAuthorization();
+  const location = useLocation();
+
+  const getInitials = () => {
+    if (!profile?.full_name) return "GO";
+    const parts = profile.full_name.trim().split(/\s+/);
+    if (parts.length === 1) return parts[0].substring(0, 2).toUpperCase();
+    return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+  };
 
   useEffect(() => {
     document.title = "Grid Policy Orchestrator (GPO)";
@@ -39,17 +51,14 @@ export function Layout({ children }: LayoutProps) {
   }, []);
 
   const navItems = [
-    { label: "Grid Overview", icon: LayoutDashboard, active: true },
-    { label: "Grid Assets", icon: Network },
-    { label: "Substations", icon: Building2 },
-    { label: "Transmission Network", icon: Cable },
-    { label: "Policy Engine", icon: Shield },
-    { label: "Digital Twin", icon: Box },
-    { label: "AI Intelligence", icon: Brain },
-    { label: "Analytics", icon: BarChart3 },
-    { label: "Reports", icon: FileText },
-    { label: "Alerts", icon: Bell },
-    { label: "Settings", icon: Settings },
+    { label: "Dashboard", icon: LayoutDashboard, path: "/", permission: "dashboard:view" },
+    { label: "Grid Overview", icon: Building2, path: "/grid-overview", permission: "grid:view" },
+    { label: "Grid Assets", icon: Network, path: "/assets", permission: "assets:view" },
+    { label: "Policy Engine", icon: Shield, path: "/policy-engine", permission: "policies:view" },
+    { label: "Analytics", icon: BarChart3, path: "/analytics", permission: "analytics:view" },
+    { label: "Reports", icon: FileText, path: "/reports", permission: "reports:view" },
+    { label: "Settings", icon: Settings, path: "/settings", permission: "settings:view" },
+    { label: "Administration", icon: ShieldCheck, path: "/admin", permission: "admin:view" },
   ];
 
   return (
@@ -103,19 +112,39 @@ export function Layout({ children }: LayoutProps) {
             {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
 
-          {/* User Placeholder */}
-          <div className="flex items-center gap-2 pl-3 border-l border-slate-200 dark:border-[#1E293B]">
-            <div className="w-7 h-7 rounded-full bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-xs font-mono font-semibold text-orange-500">
-              GO
-            </div>
-            <div className="hidden sm:block text-left">
-              <span className="block text-xs font-medium text-slate-700 dark:text-slate-300">
-                Grid Operator
+          {/* User Profile */}
+          <div className="flex items-center gap-3 pl-3 border-l border-slate-200 dark:border-[#1E293B]">
+            {profile?.avatar_url ? (
+              <img
+                src={profile.avatar_url}
+                alt={profile.full_name}
+                className="w-7 h-7 rounded-full object-cover border border-orange-500/30"
+              />
+            ) : (
+              <div className="w-7 h-7 rounded-full bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-xs font-mono font-semibold text-orange-500">
+                {getInitials()}
+              </div>
+            )}
+            <div className="hidden sm:block text-left select-text">
+              <span className="block text-xs font-medium text-slate-700 dark:text-slate-300 leading-tight">
+                {profile?.full_name || "Grid Operator"}
               </span>
-              <span className="block text-[9px] font-mono text-slate-500 uppercase leading-none">
-                Not Authenticated
+              <span className="block text-[9px] font-mono text-slate-500 uppercase leading-none mt-1">
+                {profile?.role || "Viewer"} // {profile?.organization || "GPO"}
               </span>
             </div>
+            {/* Logout Button */}
+            <button
+              onClick={() => {
+                if (window.confirm("Terminate secure console session?")) {
+                  signOut();
+                }
+              }}
+              className="w-8 h-8 rounded-full border border-slate-200 dark:border-[#1E293B] bg-white dark:bg-[#151A21] flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-red-500 dark:hover:text-red-400 transition-colors ml-1"
+              title="Logout secure session"
+            >
+              <LogOut className="w-4 h-4" />
+            </button>
           </div>
         </div>
       </header>
@@ -130,19 +159,41 @@ export function Layout({ children }: LayoutProps) {
                 Operations
               </span>
             </div>
-            {navItems.map((item) => (
-              <div
-                key={item.label}
-                className={`flex items-center gap-3 px-3 py-2 rounded-[4px] text-xs font-medium cursor-not-allowed transition-all ${
-                  item.active
-                    ? "bg-slate-100 dark:bg-[#151A21] text-orange-500 dark:text-[#FF7A1A] border border-slate-200/50 dark:border-[#2A313C]/40"
-                    : "text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200"
-                }`}
-              >
-                <item.icon className="w-4 h-4 flex-shrink-0" />
-                <span>{item.label}</span>
-              </div>
-            ))}
+            {navItems.map((item) => {
+              const isAllowed = checkPermission(item.permission);
+              const isActive = location.pathname === item.path;
+
+              if (isAllowed) {
+                return (
+                  <Link
+                    key={item.label}
+                    to={item.path}
+                    className={`flex items-center gap-3 px-3 py-2 rounded-[4px] text-xs font-medium transition-all focus-visible:ring-1 focus-visible:ring-[#FF7A1A] ${
+                      isActive
+                        ? "bg-slate-100 dark:bg-[#151A21] text-[#FF7A1A] border border-slate-200/50 dark:border-[#2A313C]/40"
+                        : "text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 hover:bg-slate-50 dark:hover:bg-[#151A21]/30 border border-transparent"
+                    }`}
+                  >
+                    <item.icon className="w-4 h-4 flex-shrink-0" />
+                    <span>{item.label}</span>
+                  </Link>
+                );
+              }
+
+              return (
+                <div
+                  key={item.label}
+                  className="flex items-center justify-between px-3 py-2 rounded-[4px] text-xs font-medium text-slate-400 dark:text-slate-600 cursor-not-allowed border border-transparent"
+                  title="Clearance required to unlock this module"
+                >
+                  <div className="flex items-center gap-3">
+                    <item.icon className="w-4 h-4 flex-shrink-0 opacity-60" />
+                    <span>{item.label}</span>
+                  </div>
+                  <Lock className="w-3.5 h-3.5 opacity-60 flex-shrink-0" />
+                </div>
+              );
+            })}
           </div>
 
           {/* Security Domain Tag */}
