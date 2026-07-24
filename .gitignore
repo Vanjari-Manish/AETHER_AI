@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ==========================
 # Node.js
 # ==========================
@@ -27,4 +28,35 @@ venv/
 
 # OS
 .DS_Store
+=======
+# ==========================
+# Node.js
+# ==========================
+node_modules/
+**/node_modules/
+
+# Build outputs
+dist/
+build/
+**/dist/
+**/build/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.env.*
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+>>>>>>> a7e7ff9c76d5b9633d1ba0e4c1de1ea4f7774523
 Thumbs.db
